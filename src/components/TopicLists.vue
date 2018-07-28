@@ -2,9 +2,11 @@
   <div class="content">
     <!-- 数据请求是展示loading -->
     <div class="loading" v-if="isLoading">
+
       <img src="../assets/loading.gif" alt="">
     </div>
-    <ul class="topics">
+    <!-- topic 列表 -->
+    <ul class="topics" v-else>
       <li class="topic-nav">
         <span class="cur-tab">全部</span>
         <span>精华</span>
@@ -21,9 +23,14 @@
           <span class='visit_count'>{{ list.visit_count }}</span>
         </span>
         <span class="tag" :class="[{put_good:(list.good == true),put_top:(list.top == true),put_normal:(list.top != true && list.good != true)}]">
-          {{ list| formatTab }}
+          {{ list.tab| formatTab }}
         </span>
-        <a class="title">{{list.title}}</a>
+        <router-link :to="{
+          name:'topic',
+          params:{
+            id: list.id
+          }
+        }"><a class="title">{{list.title}}</a></router-link>
         <span class="last_reply">{{list.last_reply_at | formatDate}}</span>
         <!-- {{list}} -->
       </li>
@@ -48,7 +55,7 @@ export default {
         page: this.pageNum,
         limit: 20
       }}).then(res=>{
-        console.log(res.data.data)
+        //console.log(res.data.data)
         //JSON.stringify(res)
         this.lists = res.data.data
         this.isLoading = false
@@ -70,7 +77,14 @@ export default {
   .content {
     max-width: 80%;
     margin:0 auto;
-    margin-top: 20px;
+    padding: 20px 0;
+  }
+  .loading {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  .topics {
     background-color: #fff;
   }
   .cell {
@@ -79,6 +93,7 @@ export default {
     height: 50px;
     padding: 10px;
     position: relative;
+    list-style: none;
   }
   .topic-nav {
     border: 1px solid #f0f0f0;
@@ -87,6 +102,7 @@ export default {
     padding: 10px;
     background: #f6f6f6;
     border-radius: 3px 3px 0 0;
+    list-style: none;
   }
   .topic-nav > span {
     color: #80bd01;

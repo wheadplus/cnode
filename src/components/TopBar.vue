@@ -1,7 +1,8 @@
 <template>
   <header>
     <div class="layout">
-      <img src="../assets/cnodejs_light.svg" alt="" class="logo">
+      <router-link :to="'/'"><img src="../assets/cnodejs_light.svg" alt="" class="logo"></router-link>
+      
       <!-- <span>
         <span></span>
         <input type="text">
@@ -49,12 +50,14 @@ export default {
   header .nav {
     float:right;
   }
+
   .nav li {
     display: inline-block;
     color: #ccc;
     line-height: 50px;
     background-color: transparent;
     margin-left: 20px;
+    list-style: none;
     cursor: pointer;
   }
   .nav li:hover{
