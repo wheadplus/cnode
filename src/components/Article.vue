@@ -66,7 +66,7 @@ export default {
     getTopic(){
       this.$http.get(`https://cnodejs.org/api/v1/topic/${this.$route.params.id}`).then(res=>{
         //通过 this.$route.params.id 获取router传递值
-        console.log(res.data)
+        //console.log(res.data)
          
         this.isLoading = false
         this.topic = res.data.data
@@ -91,7 +91,6 @@ export default {
     width: 80%;
     margin: 0 auto;
     background-color: #e1e1e1;
-    padding: 20px 0;
   }
   #topic-panel {
     

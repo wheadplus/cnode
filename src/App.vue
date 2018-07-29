@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <div class="container">
-      <TopBar/>
-      <main>
-        <div class="container"><router-view name="main"></router-view></div>
-        <div class="side"></div>
-      </main>
-      
-      
+    <div class="bg" >
+      <TopBar/>  
+      <div class="container" >
+       
+       <div id="sideBar">
+        <router-view name="sideBar"></router-view>
+       </div>
+       <div id="main">
+         <router-view name="main"></router-view>
+       </div>
+      </div>
+        <!-- <div class="side"></div> -->
     </div>  
   </div>
 </template>
@@ -41,7 +45,21 @@ body {
 ul,li {
   list-style: none;
 }
-.container {
+.bg {
   background-color: #e1e1e1;
 }
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0 60px;
+}
+#main {
+  width: 85%;
+}
+#sideBar{
+  width: 300px;
+  height: 100px;
+  float: right;
+}	
+
 </style>

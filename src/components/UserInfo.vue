@@ -1,38 +1,44 @@
 <template>
   <div>
-    <!-- <div id="user-header">
-      <div class="title">
-        主页 /
+    <div class="box">
+      <div class="box-header">主页 /</div>
+      <div class="box-content">
+        <div>
+          <img :src="userInfo.avatar_url"><span class="loginname">{{userInfo.loginname}}</span>
+        </div>
+        <div class="point"> 积分</div>
+        <p class="" > 个话题收藏</p>
+        <p><i>icon</i><span>@github</span></p>
+        <p>注册时间 </p>
       </div>
-      <div class="cell">
-        <img src="" alt="">
-        <span>{{}}</span>
-        <div>{{}}</div>
-        <div>{{}}个话题收藏</div>
-        <div><i></i> <a href="">@{{}}</a></div>
-        <div>注册时间{{}}</div>
-      </div>
+      
     </div>
-    <div class="pannel" v-for="">
-      <div class="title">{{}}</div>
-      <ul>
-        <li v-for=''>
-          <img src="" alt="">
-          <span>
-            <span class="reply_count">{{  }}</span >
-            <span class="separator">/</span>
-            <span class='visit_count'>{{  }}</span>
-          </span>
-          <router-link :to="{
-            name:'topic',
-            params:{
-              id: list.id
-            }
-          }"><a class="title">{{list.title}}</a></router-link>
-          <span class="last_reply">{{list.last_reply_at | formatDate}}</span>
-        </li>
-      </ul>
-    </div> -->
+    <div class="box">
+      <div class="box-header">最近创建的话题</div>
+      <div class="box-content">
+        <div>
+          <img :src="userInfo.avatar_url"><span class="loginname">{{userInfo.loginname}}</span>
+        </div>
+        <div class="point"> </div>
+        <p class="" > 个话题收藏</p>
+        <p><i>icon</i><span>@github</span></p>
+        <p>注册时间 </p>
+      </div>
+      
+    </div>
+    <div class="box">
+      <div class="box-header">主页 /</div>
+      <div class="box-content">
+        <div>
+          <img :src="userInfo.avatar_url"><span class="loginname">{{userInfo.loginname}}</span>
+        </div>
+        <div class="point"> 积分</div>
+        <p class="" > 个话题收藏</p>
+        <p><i>icon</i><span>@github</span></p>
+        <p>注册时间 </p>
+      </div>
+      
+    </div>
   </div>
 </template>
 

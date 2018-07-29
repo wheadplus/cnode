@@ -28,7 +28,8 @@
         <router-link :to="{
           name:'topic',
           params:{
-            id: list.id
+            id: list.id,
+            authorName:list.author.loginname
           }
         }"><a class="title">{{list.title}}</a></router-link>
         <span class="last_reply">{{list.last_reply_at | formatDate}}</span>
@@ -77,7 +78,7 @@ export default {
   .content {
     max-width: 80%;
     margin:0 auto;
-    padding: 20px 0;
+
   }
   .loading {
     display: flex;
