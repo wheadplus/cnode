@@ -35,12 +35,13 @@
         <span class="last_reply">{{list.last_reply_at | formatDate}}</span>
         <!-- {{list}} -->
       </li>
+      <Pagination @handle='renderList'></Pagination>
     </ul>
   </div>
 </template>
 
 <script>
-
+import Pagination from './Pagination'
 export default {
   name: 'TopicLists',
   data () {
@@ -50,7 +51,14 @@ export default {
       pageNum: 1
     }
   },
+  components:{
+    Pagination
+  },
   methods: {
+    renderList(page){
+      this.pageNum = page
+      this.getTopics()
+    },
     getTopics(){
       this.$http.get('https://cnodejs.org/api/v1/topics',{params:{
         page: this.pageNum,
@@ -76,7 +84,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .content {
-    max-width: 80%;
+    max-width: 90%;
     margin:0 auto;
 
   }

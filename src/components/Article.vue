@@ -48,12 +48,20 @@
           </ul>
         </div>
       </div>
-    
+      <div class="markdown">
+        <!-- <VmMarkdown theme="default"
+            width="1000px" 
+            height="600px" 
+            v-on:gethtml="showHtml"
+            :defaultText="intro">
+        </VmMarkdown> -->
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import VmMarkdown from 'vm-markdown'
 export default {
   name: 'Article',
   data () {
@@ -61,6 +69,9 @@ export default {
       isLoading:true,
       topic: {}
     }
+  },
+  components:{
+    VmMarkdown
   },
   methods: {
     getTopic(){
@@ -88,7 +99,7 @@ export default {
   @import url('../assets/markdown-github.css');
   /* topic */
   #topic {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     background-color: #e1e1e1;
   }

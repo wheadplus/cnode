@@ -2,7 +2,9 @@
   <header>
     <div class="layout">
       <router-link :to="'/'"><img src="../assets/cnodejs_light.svg" alt="" class="logo"></router-link>
-      
+      <span class="search">
+        <span class="icon">O</span>  <input type="text">
+      </span>
       <!-- <span>
         <span></span>
         <input type="text">
@@ -58,6 +60,7 @@ export default {
     background-color: transparent;
     margin-left: 20px;
     list-style: none;
+    
     cursor: pointer;
   }
   .nav li:hover{
@@ -65,5 +68,34 @@ export default {
   }
   .nav li:last-child{
     margin-right: 20px;
+  }
+  .search {
+    position: relative;
+   
+    margin: 10px 0;
+  }
+  .search input {
+    border: 0 ;
+    background: #888;
+    padding: 3px 5px 3px 22px;
+    border-radius: 15px;
+    margin-left: 10px;
+    transition: all .4s;
+    height: 30px;
+    display: inline-block;
+    margin-bottom: 10px;
+    
+  }
+  .search input:focus{
+    outline: 0;
+    
+  }
+  .search input:hover {
+    background: #fff;
+  }
+  .search .icon {
+    position: absolute;
+    top: 0;
+    left: 20px;
   }
 </style>

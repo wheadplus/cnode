@@ -1,6 +1,6 @@
 # cnode
 
-> vue 重构CNode社区
+> vue 重构CNode社区,
 
 # 进度
 ![index](./src/assets/readme/index.png)

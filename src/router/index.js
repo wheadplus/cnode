@@ -29,7 +29,8 @@ export default new Router({
       name: 'user',
       path: '/user/:username',
       components: {
-        main: UserInfo
+        main: UserInfo,
+        sideBar: HomeSideBar
       }
     }
   ]

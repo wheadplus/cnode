@@ -3190,6 +3190,10 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
+marked@^0.3.6:
+  version "0.3.19"
+  resolved "http://registry.npm.taobao.org/marked/download/marked-0.3.19.tgz#5d47f709c4c9fc3c216b6d46127280f40b39d790"
+
 math-expression-evaluator@^1.2.14:
   version "1.2.17"
   resolved "http://registry.npm.taobao.org/math-expression-evaluator/download/math-expression-evaluator-1.2.17.tgz#de819fdbcd84dccd8fae59c6aeb79615b9d266ac"
@@ -5347,6 +5351,13 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vm-markdown@^0.2.8:
+  version "0.2.8"
+  resolved "http://registry.npm.taobao.org/vm-markdown/download/vm-markdown-0.2.8.tgz#25732e104773db52b3d9bb940679e7fbe49d6157"
+  dependencies:
+    marked "^0.3.6"
+    vue "^2.3.3"
+
 vue-hot-reload-api@^2.2.0:
   version "2.3.0"
   resolved "http://registry.npm.taobao.org/vue-hot-reload-api/download/vue-hot-reload-api-2.3.0.tgz#97976142405d13d8efae154749e88c4e358cf926"
@@ -5390,6 +5401,10 @@ vue-template-compiler@^2.5.2:
 vue-template-es2015-compiler@^1.6.0:
   version "1.6.0"
   resolved "http://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
+
+vue@^2.3.3:
+  version "2.5.17"
+  resolved "http://registry.npm.taobao.org/vue/download/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
 
 vue@^2.5.2:
   version "2.5.16"

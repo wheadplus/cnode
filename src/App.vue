@@ -1,18 +1,17 @@
 <template>
   <div id="app">
-    <div class="bg" >
+    <div id="wrap">
       <TopBar/>  
-      <div class="container" >
-       
-       <div id="sideBar">
-        <router-view name="sideBar"></router-view>
-       </div>
-       <div id="main">
-         <router-view name="main"></router-view>
-       </div>
+      <div class="container" > 
+        <div id="main">
+          <router-view name="main"></router-view>
       </div>
+        <div id="sideBar">
+          <router-view name="sideBar"></router-view>
+        </div>
         <!-- <div class="side"></div> -->
     </div>  
+    </div>
   </div>
 </template>
 
@@ -39,27 +38,33 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-size: 14px;
 }
 ul,li {
   list-style: none;
 }
-.bg {
+
+#wrap {
   background-color: #e1e1e1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .container {
-  width: 90%;
-  margin: 0 auto;
-  padding: 20px 0 60px;
+  flex: auto;
+  display: flex;
+  margin-top: 20px;
+  padding-bottom: 30px;
 }
 #main {
-  width: 85%;
+  flex: auto;
 }
-#sideBar{
-  width: 300px;
-  height: 100px;
-  float: right;
-}	
+#sideBar {
+  width: 20%;
+  margin-right: 100px;
+}
+
 
 </style>
