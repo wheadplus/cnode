@@ -2,9 +2,9 @@
   <header>
     <div class="layout">
       <router-link :to="'/'"><img src="../assets/cnodejs_light.svg" alt="" class="logo"></router-link>
-      <span class="search">
+      <!-- <span class="search">
         <span class="icon">O</span>  <input type="text">
-      </span>
+      </span> -->
       <!-- <span>
         <span></span>
         <input type="text">
